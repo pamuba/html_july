@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      canvas {
+        border: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="500px" height="200px"></canvas>
+    <script>
+      (function () {
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        //Mario variables
+        const mario_width = 32;
+        const mario_height = 39;
+
+        const mario = new Image();
+        mario.src = "images/m.png";
+
+        // mario.onload = () => {
+        //   ctx.drawImage(
+        //     mario, //s
+        //     0, //sx
+        //     mario_height * 3, //sy
+        //     mario_width, //sWidth
+        //     mario_height, //sHeight
+        //     100, //dx
+        //     50, //dy
+        //     mario_width * 2,
+        //     mario_height * 2
+        //   );
+        // };
+
+        let currentFrame = 0;
+
+        const update = () => {
+          ctx.clearRect(0, 0, 500, 200);
+          ctx.drawImage(
+            mario,
+            mario_width * (Math.floor(currentFrame) % 8),
+            mario_height * 0,
+            mario_width,
+            mario_height,
+            250,
+            90,
+            mario_width,
+            mario_height
+          );
+        //   console.log(Math.floor(currentFrame) % 8 + "=========" + (mario_width * (Math.floor(currentFrame) % 8)));
+          currentFrame += .4;
+          requestAnimationFrame(update);
+        };
+        update();
+      })();
+    </script>
+  </body>
+</html>
