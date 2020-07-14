@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      style="border: 1px solid red;"
+      height="500px"
+      width="500px"
+    >
+    </canvas>
+
+    <img src="images/scene.jpg" id="img" />
+    <script>
+      //1
+      // var image = new Image();
+      // image.src ='images/images.jpg';
+      // image.alt = 'The missing image';
+      // document.body.appendChild(image);
+
+      //2
+      // var canvas = document.getElementById("canvas");
+      // var ctx = canvas.getContext('2d');
+
+      // var image = new Image();
+      // image.src ='images/images.jpg';
+      // image.alt = 'The missing image';
+
+      // image.onload = () =>{
+      //     // ctx.drawImage(image, 10,10);
+      //     ctx.drawImage(image, 10,10, 300, 250);
+      // }
+
+      //3
+      window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        var img = document.getElementById("img");
+        ctx.drawImage(img, 1500,700, 700, 700, 0,0,500,500);
+      };
+    </script>
+  </body>
+</html>
