@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //     function run(){
+    //     var foo = "Foo";
+    //     var bar = "Bar";
+
+    //     console.log(foo, bar);
+
+    //     {
+    //         let baz = "Bazz"
+    //         console.log(baz);
+    //     }
+
+    //     console.log(baz);
+    // }
+    // run();
+
+    // var func = [];
+    // for (let i = 0; i < 3; i++) {
+    //     func[i] = function(){
+    //         console.log("My value:"+i)
+    //     }
+        
+    // }
+    // for (var j = 0; j < 3; j++) {
+    //     func[j]()
+    // }
+
+//    ( function run(){
+//         //var foo;
+//         console.log(foo)
+//         let foo = "Foo"
+//         console.log(foo)
+//     })();
+
+    //  let foo = "foo1"
+    //  let foo = "foo2"
+
+
+    function outerFunction(a,b){
+        var outerVariable = 100;
+        function innerFunction(){
+            console.log(a)
+        }
+        return innerFunction;
+    }
+
+    var inner = outerFunction(10,20)
+    inner();
+   </script>
+</body>
+</html>
