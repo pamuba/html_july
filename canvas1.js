@@ -64,7 +64,7 @@ var c = canvas.getContext("2d");
 
 // }
 // animate();
-var x = 200
+var x = 200 
 var y = 200
 var dx = 10
 var dy = 10

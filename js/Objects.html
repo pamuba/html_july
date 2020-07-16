@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let name =  prompt("Enter UR name", "Bill")
+
+        // var ob = {
+        //     [name]:5 //Computed properties
+        // }
+
+        // alert(ob.Bill)
+
+    //   user = {
+    //       for:1,
+    //       let:22,
+    //       "+0":"Hello"
+    //   }
+
+       
+    //     for(let keys in user){
+    //         alert(keys + " "+ user[keys])
+    //     }
+
+    ob = {
+        a:200,
+        b:100,
+        desc:"dimensions"
+    }
+
+    function fn(obj){
+        for(let key in obj){
+            if(typeof obj[key] == 'number'){
+                obj[key] *=2;
+            }
+        }
+    }
+
+    fn(ob)
+
+
+ var name = "Hello"
+ console.log(ob.toString());
+
+
+   console.log(ob)
+    </script>
+</body>
+</html>

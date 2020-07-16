@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Student(){
+        //     this.name = "John";
+        //     this.gender = "Male"
+        // }
+
+        // Student.prototype.age = 20
+
+
+        // var st1 = new Student();
+        // alert(st1.age)
+
+        // var st2 = new Student();
+        // alert(st2.age)
+
+
+        function Person(firstName, lastName){
+            this.FirstName = firstName || "unknown"
+            this.LastName = lastName || "unknown"
+        }
+
+        Person.prototype.getFullName = function(){
+            return this.FirstName + " " + this.LastName
+        }
+
+
+
+        function Student(firstName, lastName, schoolName, grade){
+            
+            Person.call(this, firstName, lastName)
+
+            this.SchoolName = schoolName || "unknown"
+            this.Grade = grade || 0
+        }
+
+        //inheritance through prototypes
+        Student.prototype = Person.prototype;
+        
+
+
+        var std = new Student("Bill", "adams", "sun valley", 10)
+
+        console.log(std.getFullName())
+        console.log(std instanceof Student)
+        console.log(std instanceof Person)
+
+
+    </script>
+</body>
+</html>

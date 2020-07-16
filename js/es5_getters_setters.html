@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+ <script>
+     function Person(){
+         var firstName = "Sam";
+
+         Object.defineProperties(this, {
+             'FirstName':{
+                 get:function(){
+                     return firstName
+                 },
+                 set:function(value){
+                     if(value !== '')
+                        firstName = value
+                    
+                 }
+             }
+         })
+     }
+     var p1 = new Person();
+     p1.FirstName = "Mark"//set
+     console.log(p1.FirstName)//get
+ </script>
+</body>
+</html>

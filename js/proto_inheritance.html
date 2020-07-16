@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let animal = {
+            eats:true,
+            walk(){
+                console.log("Animal Walk")
+            }
+        };
+        let rabbit = {
+            jumps:true,
+            __proto__:animal
+        };
+
+        let longEar = {
+            earLength:10,
+            __proto__:rabbit,
+            walk(){
+                console.log("longEar Walk")
+                return null;
+            }
+        }
+
+        longEar.walk()
+        console.log(longEar.jumps)
+    </script>
+</body>
+</html>

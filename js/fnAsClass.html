@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(Fn, Ln, A){
+            this.firstName = Fn || "Will",
+            this.lastName = Ln || "Smith"
+            this.age = A || 20
+            this.getFullName = function(){
+                return this.firstName + " " + this.lastName+ " is " + this.age + " years old."
+            }
+        }
+
+        var st1 = new Student();
+        st1.firstName = "Jim"
+        st1.lastName = "Jordan"
+        st1.age = 40
+        console.log(st1.getFullName())
+
+
+        var st2 = new Student("Hamid","Syed", "23");
+        console.log(st2.getFullName())
+
+    </script>
+</body>
+</html>
