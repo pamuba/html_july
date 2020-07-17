@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let promiseR = new Promise(function(resolve,reject){
+        //     setTimeout(()=>resolve("Done"),1000)
+        // }).then(
+        //     result => console.log(result),
+        //     error => console.log(error)
+        // )
+        // .catch(error => console.log(error))
+        // .finally(()=>console.log("finally"))
+
+
+        // let promiseE = new Promise(function(resolve,reject){
+        //     setTimeout(()=>reject("Error"),1000)
+        // }).then(
+        //     result => console.log(result),
+        //     error => console.log(error)
+        // )
+        // .catch(error => console.log(error))
+        // .finally(()=>console.log("finally"))
+
+
+
+        // let promiseR = new Promise(function(resolve,reject){
+        //     var a = 10
+        //     setTimeout(()=>resolve(++a),1000)
+        // })
+
+        // .then(function(data){
+        //     console.log(data + '1')
+        // })
+        // .then(function(data){
+        //     console.log(data + '2')
+        // })
+        // .then(function(data){
+        //     console.log(data + '3')
+        // })
+        // .then(function(data){
+        //     console.log(data + '4')
+        // }).catch()
+
+
+
+        let promiseR = new Promise(function(resolve,reject){
+            
+            setTimeout(function(){
+                resolve('Hello world 1');
+                resolve('Hello world 2');
+                resolve('Hello world 3');
+                resolve('Hello world 4');
+            },1000)
+           
+        })
+        promiseR.then(function(data){
+                console.log(data)
+        })
+
+
+
+
+        //resolve(value) , reject(error) ----callbacks
+        // 3 internal properties
+        //state-pending, fullfilled/rejected
+        //result-undefined, value(resolve(value), error(reject(error)))
+    </script>
+</body>
+</html>

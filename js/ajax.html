@@ -9,7 +9,7 @@ function displayFullName() {
     var request = new XMLHttpRequest();
 
     // Instantiating the request object
-    request.open("GET", "http://127.0.0.1:80/edsa-js/ajax.php?fname=John&lname=Clark");
+    request.open("GET", "http://127.0.0.1:8080/edsa-js/ajax.php?fname=John&lname=Clark", true);
 
     // Defining event listener for readystatechange event
     request.onreadystatechange = function() {
