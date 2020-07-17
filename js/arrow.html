@@ -7,16 +7,70 @@
 </head>
 <body>
     <script>
-        function add(a,b){
-            return a+b
+    //     function add(a,b){
+    //         return a+b
+    //     }
+
+    //     let sum = function(a,b){
+    //         return a+b
+    //     }
+
+    //    let sum = () =>  {
+    //                         alert("Hello")
+    //                    }
+
+    //    alert(sum(1,2))
+
+    // let age = prompt("What is your age?", 18);
+
+    // let welcome = (age<20)? ()=>alert("<20") : ()=>alert(">20")
+
+
+   //Do not have this
+   //Do not have arguments
+   //Cant be called with new 
+   //Dont have super
+
+    function demo(){
+        console.log(arguments.length)
+        console.log(arguments[0])
+        console.log(arguments[1])
+
+        students=["Will","Bill","John"]
+
+        console.log("Type:", arguments instanceof Array)
+    }
+
+    demo("first","Second")
+    
+    let group = {
+        title:"Our Group",
+        students:["Will","Bill","John"],
+
+        showList(){
+            console.log(this)
+            this.students.forEach(
+                student => alert(this.title+":"+student)
+            )
         }
 
-        let sum = function(a,b){
-            return a+b
-        }
+    }
 
-       let sum = (a,b) return a+b
+
+    //  let group = {
+    //     title:"Our Group",
+    //     students:["Will","Bill","John"],
+
+    //     showList(){
+    //         this.students.forEach( //this=undefined 
+    //             function(student){alert(this.title+":"+student)}
+    //         )
+    //     }
+
+    // }
+    
         
+    // group.showList();
     </script>
 </body>
 </html>
