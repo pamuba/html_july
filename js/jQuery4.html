@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         $(document).ready(function() {
+             $('img').mousedown(function(event){
+                // $('p').text(`X:${event.screenX} Y:${event.screenX}`);
+                if(event.button == 0){
+                    $('p').text('Left Click')
+                } else if(event.button == 2){
+                    $('p').text('Right Click')
+                }
+                else
+                $('p').text(event.button)
+             })
+
+         })
+    </script>
+</head>
+<body>
+    <img src="cat.jpeg" />
+    <br>
+    <p></p>
+</body>
+</html>

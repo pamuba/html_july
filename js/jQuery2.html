@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".buttons").bind("click", function() {
+          alert("You have clicked the " + $(this).text() + " button");
+          $(this).unbind("click")
+        });
+        $(".italic").trigger("click")
+      });
+    </script>
+    <style>
+      .buttons {
+        width: 100px;
+        float: left;
+        text-align: center;
+        margin: 5px;
+        border: 2px solid;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="bold buttons">Bold</span>
+    <span class="italic buttons">Italic</span>
+  </body>
+</html>

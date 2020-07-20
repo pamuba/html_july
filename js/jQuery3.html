@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      div#clickMe {
+        width: 300px;
+        height: 100px;
+        margin: 10px;
+        background-color: green;
+        color: white;
+        border: 1px solid black;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        //e is the event variable, can prevent the default behavior
+        //of the event or stop it from propogating up to the element's
+        //parent elements
+        $("div#clickMe").click(function(e) {
+          var oldText = $(this).text();
+          $(this).text(oldText + "Click added some text!");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="clickMe">
+      Click here and watch the text change!
+    </div>
+  </body>
+</html>
